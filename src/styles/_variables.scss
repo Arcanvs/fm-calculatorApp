@@ -1,0 +1,63 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+$fontSpartan: 'League Spartan', sans-serif;
+
+// Theme 1
+// Background
+$VeryDarkdesaturatedBlueMainBack: hsl(222, 26%, 31%);
+$VeryDarkDesaturatedBlueToggleBackground: hsl(223, 31%, 20%);
+$VeryDarkDesaturatedBlueScreenBackground: hsl(224, 36%, 15%);
+
+// Keys
+$DesaturatedDarkBlueKeyBackground: hsl(225, 21%, 49%);
+$DesaturatedDarkBlueKkeyShadow: hsl(224, 28%, 35%);
+
+$RedKeyBackgroundToggle: hsl(6, 63%, 50%);
+$DarkRedKeyShadow: hsl(6, 70%, 34%);
+
+$LightGrayishOrangeKeyBackground: hsl(30, 25%, 89%);
+$GrayishOrangeKeyShadow: hsl(28, 16%, 65%);
+
+// Text
+$VeryDarkGrayishBlue: hsl(221, 14%, 31%);
+$WhiteText: hsl(0, 0%, 100%);
+
+// Theme 2
+// Backgrounds
+
+$LightGrayMainBackground: hsl(0, 0%, 90%);
+$GrayishRedToggleBackground: hsl(0, 5%, 81%);
+$VeryLightGrayScreenBackground: hsl(0, 0%, 93%);
+
+// Keys
+$DarkModerateCyanKeyBackground: hsl(185, 42%, 37%);
+$VeryDarkCyanKeyShadow: hsl(185, 58%, 25%);
+
+$OrangeKeyBackgroundToggle: hsl(25, 98%, 40%);
+$DarkOrangeKeyShadow: hsl(25, 99%, 27%);
+
+$LightGrayishYellowKeyBackground: hsl(45, 7%, 89%);
+$DarkGrayishOrangeKeyShadow: hsl(35, 11%, 61%);
+
+// Text
+$VeryDarkGrayishYellow: hsl(60, 10%, 19%);
+
+// Theme 3
+// Backgrounds
+
+$VeryDarkVioletMainBackground: hsl(268, 75%, 9%);
+$VeryDarkVioletToggleBackground: hsl(268, 71%, 12%);
+
+// Keys
+$DarkVioletKeyBackground: hsl(281, 89%, 26%);
+$VividMagentaKeyShadow: hsl(285, 91%, 52%);
+
+$PureCyanKeyBackgroundToggle: hsl(176, 100%, 44%);
+$SoftCyanKeyShadow: hsl(177, 92%, 70%);
+
+$VeryDarkVioletKeyBackground: hsl(268, 47%, 21%);
+$DarkMagentaKeyShadow: hsl(290, 70%, 36%);
+
+// Text
+$LightYellow: hsl(52, 100%, 62%);
+$VeryDarkBlue: hsl(198, 20%, 13%);
