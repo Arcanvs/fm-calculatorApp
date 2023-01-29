@@ -6,6 +6,7 @@ const CalculatorOrg = () => {
   const [displayNum, setDisplayNum] = useState('0');
   const [mathOperation, setMathOperation] = useState('');
   const [isOperator, setIsOperator] = useState(false);
+  const [isDecimal, setIsDecimal] = useState(false);
   const [cleanDisplay, setCleanDisplay] = useState(false);
 
   const handleActionButton = (data) => {
@@ -29,6 +30,7 @@ const CalculatorOrg = () => {
     if(data.action === 'reset'){
       setDisplayNum('0');
       setMathOperation('');
+      setIsDecimal(false);
     }
     if(data.action === 'remove'){
       let numDisplay = (displayNum.length - 1) === 0 ? '0' : displayNum.substring(0, displayNum.length - 1);
@@ -37,29 +39,35 @@ const CalculatorOrg = () => {
       setMathOperation(mathCalc);
     }
     if(data.action === 'sum'){
-      if(isOperator){
-        console.log('ejecutar EVAL');
-        let resultadoParcial = eval(mathOperation).toString();
-        setMathOperation(`${resultadoParcial}${data.text}`);
-        setDisplayNum(resultadoParcial);
-        setCleanDisplay(true);
-      }else{
-        setIsOperator(true);
-        setCleanDisplay(true);
-        setMathOperation(`${mathOperation}${data.text}`);
-      }
+      operaciones(data.text);
     }
     if(data.action === 'subtract'){
-      if(isOperator){
-        console.log('ejecutar RESTA');
-        let resultadoParcial = eval(mathOperation).toString();
-        setMathOperation(`${resultadoParcial}${data.text}`);
-        setDisplayNum(resultadoParcial);
-        setCleanDisplay(true);
-      }else{
-        setIsOperator(true);
-        setCleanDisplay(true);
-        setMathOperation(`${mathOperation}${data.text}`);
+      operaciones(data.text);
+    }
+    if(data.action === 'multiply'){
+      operaciones('*');
+    }
+    if(data.action === 'division'){
+      operaciones(data.text);
+    }
+    if(data.action === 'decimal'){
+      if(!isDecimal){
+        setIsDecimal(true);
+        if(displayNum === '0'){
+          setDisplayNum(`0${data.text}`);
+        }else{
+          if(isOperator){
+            if(cleanDisplay){
+              setDisplayNum(`0${data.text}`);
+              setCleanDisplay(false);
+            }else{
+              setDisplayNum(`${displayNum}${data.text}`);  
+            }
+          }else{
+            setDisplayNum(`${displayNum}${data.text}`);
+          }
+        }
+        mathOperation === '' ? setMathOperation(data.text) : setMathOperation(`${mathOperation}${data.text}`);
       }
     }
     if(data.action === 'result'){
@@ -71,35 +79,23 @@ const CalculatorOrg = () => {
 
   }
   /* 
-  if(data.action === 'add'){
-    
-    }
-    if(data.action === 'remove'){
-
-    }
-    if(data.action === 'sum'){
-
-    }
-    if(data.action === 'subtract'){
-
-    }
     if(data.action === 'decimal'){
 
     }
-    if(data.action === 'division'){
-
-    }
-    if(data.action === 'multiply'){
-
-    }
-    if(data.action === 'reset'){
-
-    }
-    if(data.action === 'result'){
-
-    }
   */
-
+  const operaciones = (value) => {
+    if(isOperator){
+      let resultadoParcial = eval(mathOperation).toString();
+      setMathOperation(`${resultadoParcial}${value}`);
+      setDisplayNum(resultadoParcial);
+      setCleanDisplay(true);
+    }else{
+      setIsOperator(true);
+      setCleanDisplay(true);
+      setMathOperation(`${mathOperation}${value}`);
+    }
+    setIsDecimal(false);
+  }
   return (
     <div>
         <NavCalc />
