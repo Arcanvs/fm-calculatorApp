@@ -1,9 +1,11 @@
+import { CalculatorPage } from "./components/pages"
+
 function App() {
 
   return (
-    <div className="App">
-      Calculator App  
-    </div>
+    <main className="App">
+      <CalculatorPage />
+    </main>
   )
 }
 
