@@ -9,7 +9,11 @@ const DisplayCalc = ({dataDisplay}) => {
     }
   }, [dataDisplay]);
   return (
-    <div>numero : {displayNum}</div>
+    <div className="calculator__display">
+      <div className="display">
+        {displayNum}
+      </div>  
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ const ButtonCalc = ({objBtn, clickAction}) => {
         clickAction(data)
     }
     return (
-        <div onClick={() => handleClickAction(objBtn)}>{objBtn.text}</div>
+        <button className="button__calc" onClick={() => handleClickAction(objBtn)}>{objBtn.text}</button>
     )
 }
 

@@ -2,7 +2,7 @@ import { SwitchCalc } from "../atoms"
 
 const NavCalc = () => {
   return (
-    <div>NavCalc</div>
+    <div className="calculator__switch">NavCalc</div>
   )
 }
 

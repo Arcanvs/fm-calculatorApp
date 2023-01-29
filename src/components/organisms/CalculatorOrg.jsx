@@ -97,7 +97,7 @@ const CalculatorOrg = () => {
     setIsDecimal(false);
   }
   return (
-    <div>
+    <div className="calculator__body">
         <NavCalc />
         <DisplayCalc dataDisplay={displayNum} />
         <BodyCalc buttonsCalc={buttonsData} dataButton={handleActionButton}/>

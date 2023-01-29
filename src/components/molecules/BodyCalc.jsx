@@ -5,12 +5,14 @@ const BodyCalc = ({buttonsCalc, dataButton}) => {
     dataButton(data);
   }
   return (
-    <div>
-      {
-        buttonsCalc.map((btn, index) => (
-          <ButtonCalc key={index} objBtn={btn} clickAction={obtainDataButton} />
-        ))
-      }
+    <div className="calculator__buttons">
+      <div className="buttons__container">
+        {
+          buttonsCalc.map((btn, index) => (
+            <ButtonCalc key={index} objBtn={btn} clickAction={obtainDataButton} />
+          ))
+        }
+      </div>
     </div>
   )
 }
