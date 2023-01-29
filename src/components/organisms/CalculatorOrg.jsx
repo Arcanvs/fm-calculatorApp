@@ -9,8 +9,6 @@ const CalculatorOrg = () => {
   const [cleanDisplay, setCleanDisplay] = useState(false);
 
   const handleActionButton = (data) => {
-    console.log('ACTION :: ', data);
-    console.log('Operacion ', mathOperation);
     if(data.action === 'add'){
       if(displayNum === '0'){
         setDisplayNum(data.text)
@@ -51,6 +49,26 @@ const CalculatorOrg = () => {
         setMathOperation(`${mathOperation}${data.text}`);
       }
     }
+    if(data.action === 'subtract'){
+      if(isOperator){
+        console.log('ejecutar RESTA');
+        let resultadoParcial = eval(mathOperation).toString();
+        setMathOperation(`${resultadoParcial}${data.text}`);
+        setDisplayNum(resultadoParcial);
+        setCleanDisplay(true);
+      }else{
+        setIsOperator(true);
+        setCleanDisplay(true);
+        setMathOperation(`${mathOperation}${data.text}`);
+      }
+    }
+    if(data.action === 'result'){
+      let resultadoParcial = eval(mathOperation).toString();
+      setMathOperation(`${resultadoParcial}`);
+      setDisplayNum(resultadoParcial);
+      setCleanDisplay(true);
+    }
+
   }
   /* 
   if(data.action === 'add'){
