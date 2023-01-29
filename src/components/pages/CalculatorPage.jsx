@@ -2,7 +2,7 @@ import { CalculatorOrg } from "../organisms"
 
 const CalculatorPage = () => {
   return (
-    <div>
+    <div className="calculator__body theme__1">
         <CalculatorOrg />
     </div>
   )

@@ -1,8 +1,17 @@
 import { ButtonCalc } from "../atoms"
 
-const BodyCalc = () => {
+const BodyCalc = ({buttonsCalc, dataButton}) => {
+  const obtainDataButton = (data) => {
+    dataButton(data);
+  }
   return (
-    <div>BodyCalc</div>
+    <div>
+      {
+        buttonsCalc.map((btn, index) => (
+          <ButtonCalc key={index} objBtn={btn} clickAction={obtainDataButton} />
+        ))
+      }
+    </div>
   )
 }
 

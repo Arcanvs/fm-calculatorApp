@@ -1,0 +1,15 @@
+.calculator__body{
+    width: 100vw;
+    height: 100vh;
+
+    &.theme__1{
+        background-color: $VeryDarkdesaturatedBlueMainBack;
+    }
+    &.theme__2{
+        background-color: $LightGrayMainBackground;
+    }
+    &.theme__3{
+        background-color: $VeryDarkVioletMainBackground;
+    }
+
+}
