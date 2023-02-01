@@ -1,6 +1,6 @@
 import { NavCalc, DisplayCalc, BodyCalc } from "../molecules";
 import buttonsData from "../../data/buttonsData";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const CalculatorOrg = () => {
   const [displayNum, setDisplayNum] = useState('0');
@@ -10,6 +10,7 @@ const CalculatorOrg = () => {
   const [cleanDisplay, setCleanDisplay] = useState(false);
 
   const handleActionButton = (data) => {
+
     if(data.action === 'add'){
       if(displayNum === '0'){
         setDisplayNum(data.text)
