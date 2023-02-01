@@ -44,10 +44,16 @@
                 padding: 15px;
                 border-width: 0 0 4px 0;
                 background-color: $LightGrayishOrangeKeyBackground;
-                border-color: $GrayishOrangeKeyShadow;
+                border-bottom: 5px solid $GrayishOrangeKeyShadow;
                 &.delete{
                     background-color: $DesaturatedDarkBlueKeyBackground;
-                    border-color: DesaturatedDarkBlueKkeyShadow;
+                    border-bottom: 5px solid $DesaturatedDarkBlueKkeyShadow;
+                    color: white;
+                }
+                &.equal{
+                    background-color: $RedKeyBackgroundToggle;
+                    border-bottom: 5px solid $DarkRedKeyShadow;
+                    color: white;
                 }
                 &:nth-last-child(-n+2){
                     width: 228px !important;
@@ -66,12 +72,62 @@
         }
         .calculator__buttons{
             background-color: $VeryDarkDesaturatedBlueToggleBackground;
+            .button__calc{
+                background-color: $LightGrayishOrangeKeyBackground;
+                border-bottom: 5px solid $GrayishOrangeKeyShadow;
+                &.delete{
+                    background-color: $DesaturatedDarkBlueKeyBackground;
+                    border-bottom: 5px solid $DesaturatedDarkBlueKkeyShadow;
+                    color: white;
+                }
+                &.equal{
+                    background-color: $RedKeyBackgroundToggle;
+                    border-bottom: 5px solid $DarkRedKeyShadow;
+                    color: white;
+                }
+            }
         }
     }
     &.theme__2{
         background-color: $LightGrayMainBackground;
+        .calculator__buttons{
+            background-color: $GrayishRedToggleBackground;
+            .button__calc{
+                background-color: $LightGrayishOrangeKeyBackground;
+                border-bottom: 5px solid $GrayishOrangeKeyShadow;
+                color: $VeryDarkGrayishYellow;
+                &.delete{
+                    background-color: $DarkModerateCyanKeyBackground;
+                    border-bottom: 5px solid $VeryDarkCyanKeyShadow;
+                    color: white;
+                }
+                &.equal{
+                    background-color: $OrangeKeyBackgroundToggle;
+                    border-bottom: 5px solid $DarkOrangeKeyShadow;
+                    color: white;
+                }
+            }
+        }
     }
     &.theme__3{
         background-color: $VeryDarkVioletMainBackground;
+        .calculator__buttons{
+            background-color: $VeryDarkVioletToggleBackground;
+            .button__calc{
+                background-color: $DarkVioletKeyBackground;
+                border-bottom: 5px solid $VividMagentaKeyShadow;
+                color: $LightYellow;
+                &.delete{
+                    background-color: $VeryDarkVioletKeyBackground;
+                    border-bottom: 5px solid $DarkMagentaKeyShadow;
+                    color: white;
+                }
+                &.equal{
+                    background-color: $PureCyanKeyBackgroundToggle;
+                    border-bottom: 5px solid $SoftCyanKeyShadow;
+                    color: $VeryDarkBlue;
+                }
+            }
+        }
     }
 }
