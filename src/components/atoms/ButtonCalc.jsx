@@ -7,7 +7,7 @@ const ButtonCalc = ({objBtn, clickAction}) => {
     
     return (
         <button className={['button__calc',delClass, eqClass].join(' ')} onClick={() => handleClickAction(objBtn)}>
-            {objBtn.text}
+            {objBtn.text}  
         </button>
     )
 }

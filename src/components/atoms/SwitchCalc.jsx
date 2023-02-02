@@ -6,13 +6,13 @@ const SwitchCalc = () => {
   const {switchClassTheme, setSwitchClassTheme} = useContext(ThemeContext);
 
   const handleChangeSteps = (value) => {
-    console.log('mira rey ', value);
     setCheckOption(value);
     setSwitchClassTheme(`theme__${value}`);
   }
   return (
     <>
-      <div class="switch__steps">
+      <div className="switch__steps">
+        <span className="steps__title">THEME</span>
         <div className="steps__nums">
           <span>1</span>
           <span>2</span>
