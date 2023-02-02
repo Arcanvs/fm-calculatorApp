@@ -11,11 +11,15 @@
     }
     .calculator__switch{
         /* height: 70px; */
-        background: red;
-        margin-top: 114px;
+        margin-top: 112px;
         justify-content: space-between;
         display: flex;
         align-items: center;
+        h1{
+            margin: 0;
+            margin-left: 8px;
+            font-size: 30px;
+        }
     }
     .calculator__display{
         margin-top: 32px;
@@ -66,6 +70,24 @@
 
     &.theme__1{
         background-color: $VeryDarkdesaturatedBlueMainBack;
+        .calculator__switch{
+            h1{
+                color: $WhiteText;
+            }
+        }
+        .switch__steps {
+            background-color: $VeryDarkDesaturatedBlueToggleBackground;
+            .steps__nums{
+                span{
+                    color: $WhiteText;
+                }
+            }
+            input[type="radio"]{
+                &:checked::before{
+                    background-color: $RedKeyBackgroundToggle;
+                }
+            }
+          }
         .calculator__display{
             background-color: $VeryDarkDesaturatedBlueScreenBackground;
             .display{
@@ -92,6 +114,19 @@
     }
     &.theme__2{
         background-color: $LightGrayMainBackground;
+        .switch__steps {
+            background-color: $GrayishRedToggleBackground;
+            .steps__nums{
+                span{
+                    color: $VeryDarkGrayishYellow;
+                }
+            }
+            input[type="radio"]{
+                &:checked::before{
+                    background-color: $OrangeKeyBackgroundToggle;
+                }
+            }
+          }
         .calculator__buttons{
             background-color: $GrayishRedToggleBackground;
             .button__calc{
@@ -113,6 +148,24 @@
     }
     &.theme__3{
         background-color: $VeryDarkVioletMainBackground;
+        .switch__steps {
+            background-color: $VeryDarkVioletToggleBackground;
+            .steps__nums{
+                span{
+                    color: $LightYellow;
+                }
+            }
+            input[type="radio"]{
+                &:checked::before{
+                    background-color: $PureCyanKeyBackgroundToggle;
+                }
+            }
+          }
+        .calculator__switch{
+            h1{
+                color: $LightYellow;
+            }
+        }
         .calculator__buttons{
             background-color: $VeryDarkVioletToggleBackground;
             .button__calc{
@@ -138,7 +191,6 @@
     display: flex;
     flex-flow:column;
     justify-content: center;
-    background-color: blue;
     border-radius: 50px;
     width: fit-content;
     height: 26px;
@@ -167,9 +219,6 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-        }
-        &:checked::before{
-            background-color: yellow;
         }
     }
   }
