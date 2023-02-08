@@ -34,7 +34,7 @@ const CalculatorOrg = () => {
       setIsDecimal(false);
     }
     if(data.action === 'remove'){
-      let numDisplay = (displayNum.length - 1) === 0 ? '0' : displayNum.substring(0, displayNum.length - 1);
+      let numDisplay = (displayNum.toString().length - 1) === 0 ? '0' : displayNum.toString().substring(0, displayNum.toString().length - 1);
       let mathCalc = (mathOperation.length - 1) === 0 ? '' : mathOperation.substring(0, mathOperation.length - 1);
       setDisplayNum(numDisplay);
       setMathOperation(mathCalc);
@@ -72,18 +72,16 @@ const CalculatorOrg = () => {
       }
     }
     if(data.action === 'result'){
-      let resultadoParcial = eval(mathOperation).toString();
-      setMathOperation(`${resultadoParcial}`);
-      setDisplayNum(resultadoParcial);
-      setCleanDisplay(true);
+      if(mathOperation.length > 1){
+        let resultadoParcial = eval(mathOperation);
+        console.log('resultado ', resultadoParcial);
+        setMathOperation(`${resultadoParcial}`);
+        setDisplayNum(resultadoParcial);
+        setCleanDisplay(true);
+      }
     }
-
   }
-  /* 
-    if(data.action === 'decimal'){
 
-    }
-  */
   const operaciones = (value) => {
     if(isOperator){
       let resultadoParcial = eval(mathOperation).toString();

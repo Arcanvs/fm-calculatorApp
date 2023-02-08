@@ -60,6 +60,7 @@
                 border-width: 0 0 4px 0;
                 background-color: $LightGrayishOrangeKeyBackground;
                 border-bottom: 5px solid $GrayishOrangeKeyShadow;
+                cursor: pointer;
                 &.delete{
                     background-color: $DesaturatedDarkBlueKeyBackground;
                     border-bottom: 5px solid $DesaturatedDarkBlueKkeyShadow;
@@ -107,15 +108,24 @@
                 background-color: $LightGrayishOrangeKeyBackground;
                 border-bottom: 5px solid $GrayishOrangeKeyShadow;
                 color: $VeryDarkGrayishBlue;
+                &:active{
+                    background-color: lighten($LightGrayishOrangeKeyBackground, 10%);
+                }
                 &.delete{
                     background-color: $DesaturatedDarkBlueKeyBackground;
                     border-bottom: 5px solid $DesaturatedDarkBlueKkeyShadow;
                     color: white;
+                    &:active{
+                        background-color: lighten($DesaturatedDarkBlueKeyBackground, 10%);
+                    }
                 }
                 &.equal{
                     background-color: $RedKeyBackgroundToggle;
                     border-bottom: 5px solid $DarkRedKeyShadow;
                     color: white;
+                    &:active{
+                        background-color: lighten($RedKeyBackgroundToggle, 10%);
+                    }
                 }
             }
         }
@@ -143,15 +153,24 @@
                 background-color: $LightGrayishOrangeKeyBackground;
                 border-bottom: 5px solid $GrayishOrangeKeyShadow;
                 color: $VeryDarkGrayishYellow;
+                &:active{
+                    background-color: lighten($LightGrayishOrangeKeyBackground, 10%);
+                }
                 &.delete{
                     background-color: $DarkModerateCyanKeyBackground;
                     border-bottom: 5px solid $VeryDarkCyanKeyShadow;
                     color: white;
+                    &:active{
+                        background-color: lighten($DarkModerateCyanKeyBackground, 10%);
+                    }
                 }
                 &.equal{
                     background-color: $OrangeKeyBackgroundToggle;
                     border-bottom: 5px solid $DarkOrangeKeyShadow;
                     color: white;
+                    &:active{
+                        background-color: lighten($OrangeKeyBackgroundToggle, 10%);
+                    }
                 }
             }
         }
@@ -184,15 +203,24 @@
                 background-color: $VeryDarkVioletKeyBackground;
                 border-bottom: 5px solid $VividMagentaKeyShadow;
                 color: $LightYellow;
+                &:active{
+                    background-color: lighten($VeryDarkVioletKeyBackground, 10%);
+                }
                 &.delete{
                     background-color: $DarkVioletKeyBackground;
                     border-bottom: 5px solid $DarkMagentaKeyShadow;
                     color: white;
+                    &:active{
+                        background-color: lighten($DarkVioletKeyBackground, 10%);
+                    }
                 }
                 &.equal{
                     background-color: $PureCyanKeyBackgroundToggle;
                     border-bottom: 5px solid $SoftCyanKeyShadow;
                     color: $VeryDarkBlue;
+                    &:active{
+                        background-color: lighten($PureCyanKeyBackgroundToggle, 10%);
+                    }
                 }
             }
         }

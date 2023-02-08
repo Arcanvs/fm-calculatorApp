@@ -19,9 +19,9 @@ const SwitchCalc = () => {
           <span>3</span>
         </div>
         <div>
-          <input checked={checkOption === 1} onChange={() => handleChangeSteps(1)} class="button" type="radio" name="toggle" id="step1" />
-          <input checked={checkOption === 2} onChange={() => handleChangeSteps(2)} class="button" type="radio" name="toggle" id="step2" />
-          <input checked={checkOption === 3} onChange={() => handleChangeSteps(3)} class="button" type="radio" name="toggle" id="step3" />
+          <input checked={checkOption === 1} onChange={() => handleChangeSteps(1)} className="button" type="radio" name="toggle" id="step1" />
+          <input checked={checkOption === 2} onChange={() => handleChangeSteps(2)} className="button" type="radio" name="toggle" id="step2" />
+          <input checked={checkOption === 3} onChange={() => handleChangeSteps(3)} className="button" type="radio" name="toggle" id="step3" />
         </div>
       </div>
     </>
