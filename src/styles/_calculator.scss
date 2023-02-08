@@ -7,10 +7,10 @@
     
     .calculator__body{
         max-width: 540px;
-        width: 100%;;
+        width: 100%;
+        padding: 0 24px;
     }
     .calculator__switch{
-        /* height: 70px; */
         margin-top: 112px;
         justify-content: space-between;
         display: flex;
@@ -32,6 +32,13 @@
             width: 100%;
             text-align: end;
             font-size: 55px;
+            overflow: hidden;
+            white-space: nowrap;
+            div{
+                overflow: overlay;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
         }
     }
     .calculator__buttons{
@@ -40,6 +47,8 @@
         border-radius: 10px;
         .buttons__container{
             padding: 32px 18px;
+            display: flex;
+            flex-flow: wrap;
             .button__calc{
                 height: 65px;
                 width: 102px;
@@ -55,14 +64,16 @@
                     background-color: $DesaturatedDarkBlueKeyBackground;
                     border-bottom: 5px solid $DesaturatedDarkBlueKkeyShadow;
                     color: white;
+                    font-size: 27px;
                 }
                 &.equal{
                     background-color: $RedKeyBackgroundToggle;
                     border-bottom: 5px solid $DarkRedKeyShadow;
                     color: white;
+                    font-size: 27px; 
                 }
                 &:nth-last-child(-n+2){
-                    width: 228px !important;
+                    width: 228px;
                 }
             }
         }
@@ -228,3 +239,41 @@
         }
     }
   }
+
+@media (max-width: 580px){
+    .calculator__app{
+        .calculator__body{
+            max-width: 324px
+        }
+        .calculator__switch{
+            margin-top: 46px !important;
+        }
+        .calculator__display{
+            height: 86px !important;
+            .display{
+                font-size: 39px !important;
+                padding: 0 26px !important; 
+            }
+        }
+        .calculator__buttons{
+            height: 420px;
+            .buttons__container{
+                padding: 25px 18px !important;
+                .button__calc{
+                    width: 60px !important;
+                    margin: 0 6px 10px 6px !important;
+                    font-size: 36px !important;
+                    &.delete{
+                        font-size: 20px !important;
+                    }
+                    &.equal{
+                        font-size: 20px !important; 
+                    }
+                    &:nth-last-child(-n+2){
+                        width: 132px !important;
+                    }
+                }
+            }
+        }
+    }
+}

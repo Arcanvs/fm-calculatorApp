@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { InputCalc } from "../atoms"
 
 const DisplayCalc = ({dataDisplay}) => {
   const [displayNum, setDisplayNum] = useState('0');
@@ -11,7 +10,7 @@ const DisplayCalc = ({dataDisplay}) => {
   return (
     <div className="calculator__display">
       <div className="display">
-        {displayNum}
+        <div>{parseFloat(displayNum).toLocaleString()}</div>
       </div>  
     </div>
   )
